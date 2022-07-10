@@ -2,4 +2,5 @@
 using Project_E;
 
 Console.WriteLine("Task 1");
-Console.WriteLine(Task1.Solve(1000));
+Console.WriteLine($"Отыет {Task1.Solve(1000)}");
+Console.WriteLine($"Отыет {Task1.Solve(1000)}");
