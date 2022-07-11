@@ -31,6 +31,7 @@ namespace TestProject
         {
              var n = 37;
             Assert.AreEqual(37, Task3.Solve(n));
+            Assert.AreEqual(37, Task3.Solve2(n));
         }
     }
 }

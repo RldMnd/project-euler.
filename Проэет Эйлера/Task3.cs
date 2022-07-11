@@ -46,5 +46,36 @@ namespace Project_E
             Console.WriteLine($"Время {DateTime.Now.Ticks - dt}");
             return num;
         }
+
+        public static long Solve2(long num)
+        {
+            var dt = DateTime.Now.Ticks;
+            //Получаем список простых числе до х, где х*х=num
+            var list = new List<long>();
+            list.Add(2);
+            var val = 3;
+            var isPrime = true;
+            while (val * val < num) {
+                isPrime = true;
+                foreach (var el in list){
+                    if (val % el == 0)
+                    {
+                        isPrime = false;
+                        val += 2;
+                    }
+                }
+                if (isPrime)
+                {
+                    list.Add(val);
+                    if (num % val == 0)
+                    {
+                        num /= val;
+                    }
+                }
+            }
+
+            Console.WriteLine($"Время {DateTime.Now.Ticks - dt}");
+            return num;
+        }
     }
 }
