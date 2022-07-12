@@ -33,5 +33,11 @@ namespace TestProject
             Assert.AreEqual(37, Task3.Solve(n));
             Assert.AreEqual(37, Task3.Solve2(n));
         }
+
+        [Test]
+        public void Tett_Task4()
+        { 
+            Assert.AreEqual(9009, Task4.Solve(2));
+        }
     }
 }
